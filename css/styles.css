@@ -1,0 +1,307 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap");
+
+/* Base Styling */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --very-dark-magenta: hsl(300, 43%, 22%);
+  --soft-pink: hsl(333, 80%, 67%);
+  --dark-grayish-magenta: hsl(303, 10%, 53%);
+  --light-grayish-magenta: hsl(300, 24%, 96%);
+  --white: hsl(0, 0%, 100%);
+
+  --font-size-43px: clamp(2rem, calc(1rem + 5vw), 3rem);
+  --font-size-16px: clamp(0.4rem, calc(0.3rem + 3vw), 1rem);
+  --body-font: "League Spartan", sans-serif;
+
+  --font-weight700: 700;
+  --font-weight500: 500;
+  --font-weight400: 400;
+
+  --padding-content: 8rem;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--body-font);
+}
+
+.row {
+  display: flex;
+  width: 70%;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+}
+
+h1 {
+  /**font-size: clamp(2rem, calc(1rem + 5vw), 3rem);
+    what this does is states the browser look try and 
+    give us a proper relative unit based on that calculation instead(fluid font-size)**/
+
+  font-size: var(--font-size-43px);
+  color: var(--very-dark-magenta);
+  font-weight: 700;
+  padding: 0 3rem 2rem 0;
+}
+
+p {
+  font-size: var(--font-size-16px);
+  font-weight: 400;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* Bg Styling */
+
+.bg-images-container {
+  display: inline-block;
+  min-width: 100vw;
+}
+
+.bg {
+  background-image: url(../images/bg-pattern-top-desktop.svg),
+    url(../images/bg-pattern-bottom-desktop.svg);
+  background-color: var(--white);
+  background-repeat: no-repeat, no-repeat;
+  background-size: 80% 100%, 80% 100%;
+  background-position: left 0 top -405px, right 0 bottom -90px;
+  min-height: 100vh;
+}
+
+/* Header Styling */
+
+header {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 80px 0;
+}
+
+.top-left {
+  width: 35%;
+}
+
+.top-left p {
+  color: var(--dark-grayish-magenta);
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.top-right {
+  display: flex;
+  width: 65%;
+  align-items: flex-end;
+
+  flex-direction: column;
+}
+
+.star {
+  white-space: nowrap;
+}
+
+.star img {
+  width: 1rem;
+  height: 1rem;
+}
+
+.reviews {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  padding: 0.7rem;
+  margin: 0.3rem 0.1rem;
+  background-color: var(--light-grayish-magenta);
+  border-radius: 0.3rem;
+}
+
+.reviews p {
+  color: var(--very-dark-magenta);
+  font-weight: 700;
+  font-size: var(--font-size-16px);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.review {
+  margin-right: 27%;
+}
+.report {
+  margin-right: 15%;
+}
+
+/* Main Styling */
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+
+main img {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 1rem;
+  float: left;
+  margin: 0 1rem 1rem 0;
+}
+
+main .row {
+  display: flex;
+  width: 70%;
+  justify-content: space-between;
+}
+
+.reviews2 {
+  background-color: var(--very-dark-magenta);
+  text-align: left;
+  flex-direction: column;
+  padding: 1.2rem;
+  border-radius: 0.3rem;
+  margin: 0 0 4rem 0;
+  display: flex;
+  width: 32%;
+  height: 60%;
+}
+
+.reviews2 p {
+  color: var(--white);
+  font-size: 0.9rem;
+  line-height: 1.2;
+}
+
+.reviews2 .buyer {
+  color: var(--soft-pink);
+}
+
+.service {
+  margin-top: 2.2rem;
+}
+
+.order {
+  margin-top: 4.2rem;
+}
+
+/* Footer Styling */
+
+footer {
+  width: 100%;
+}
+
+footer p {
+  text-align: center;
+}
+
+/************************************** Media Query Mobile **********************************************/
+
+@media (max-width: 768px) {
+  /* Base Styling */
+
+  .row {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  h1 {
+    /**font-size: 2.2rem;**/
+    padding: 0 0 2rem 0;
+  }
+
+  /* Bg Styling */
+
+  .bg-images-container {
+    display: inline-block;
+    min-width: 100vw;
+  }
+
+  .bg {
+    background-image: url(../images/bg-pattern-top-mobile.svg),
+      url(../images/bg-pattern-bottom-mobile.svg);
+    background-color: var(--white);
+    background-repeat: no-repeat, no-repeat;
+    background-size: 100% 40%, 100% 50%;
+    background-position: left 0 top 0, right 0 bottom -100px;
+    height: 200vh;
+  }
+
+  /* Header Styling */
+
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    padding: 4rem 0 2rem 0;
+  }
+
+  .top-left {
+    width: 100%;
+  }
+
+  .top-left h1,
+  p {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .top-right {
+    width: 90%;
+  }
+
+  .reviews {
+    width: 100%;
+    padding: 0.7rem;
+    margin: 0.3rem 0.1rem;
+    background-color: var(--light-grayish-magenta);
+    border-radius: 0.3rem;
+    flex-direction: column;
+  }
+
+  /* Main Styling */
+
+  main .row {
+    width: 100%;
+  }
+
+  main .reviews2 {
+    width: 90%;
+    margin: 0 0 1rem 0;
+  }
+
+  footer {
+    height: 4rem;
+  }
+}
+
+/************************************** Media Query Tablet **********************************************/
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  /* Base Styling */
+
+  h1 {
+    /**font-size: clamp(2rem, calc(1rem + 5vw), 3rem);
+           what this does is states the browser look try and 
+           give us a proper relative unit based on that calculation instead(fluid font-size)**/
+
+    font-size: clamp(1rem, calc(1rem + 4vw), 2.3rem);
+  }
+
+  .reviews {
+    width: 80%;
+    flex-direction: row;
+  }
+}
