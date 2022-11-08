@@ -31,7 +31,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: (https://github.com/DorotaMroz/Social-proof-section-solution)
-- Live Site URL: ()
+- Live Site URL: (https://dorotamroz.github.io/Social-proof-section-solution/)
 
 ## My process
 
